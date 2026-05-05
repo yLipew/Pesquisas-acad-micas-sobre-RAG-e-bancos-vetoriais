@@ -5,64 +5,63 @@
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge)
 ![Institution](https://img.shields.io/badge/Instituição-FATESG%20/%20SENAI-red?style=for-the-badge)
 
-Este repositório contém uma série de pesquisas acadêmicas desenvolvidas para a disciplina de Inteligência Artificial, focadas em técnicas modernas de recuperação de informação e armazenamento semântico.
+Este repositório contém o material das pesquisas acadêmicas desenvolvidas para a disciplina de Inteligência Artificial, focadas em técnicas de recuperação de informação e armazenamento semântico.
 
 ---
 
 ## 🎯 Objetivos Acadêmicos
-O objetivo principal destas pesquisas é explorar as tecnologias que resolvem os problemas de "alucinação" e falta de atualização em tempo real dos Grandes Modelos de Linguagem (LLMs).
+O objetivo central deste trabalho é explorar as tecnologias que solucionam os problemas de "alucinação" e a falta de atualização em tempo real dos Grandes Modelos de Linguagem (LLMs).
 * Compreender o funcionamento da arquitetura **RAG (Retrieval-Augmented Generation)**.
-* Analisar o papel crítico dos **Bancos de Dados Vetoriais** na IA moderna.
-* Diferenciar buscas exatas (SQL) de buscas por similaridade semântica.
+* Analisar o papel fundamental dos **Bancos de Dados Vetoriais** na infraestrutura de IA.
+* Diferenciar buscas exatas (tradicionais) de buscas por similaridade semântica (vetoriais).
 
 ---
 
 ## 🔍 Resumo das Pesquisas
 
 ### 1. RAG - Retrieval-Augmented Generation
-[cite_start]A pesquisa aborda a técnica de **Geração Aumentada por Recuperação**, que conecta modelos de linguagem a fontes de dados externas e confiáveis[cite: 12, 16].
+A pesquisa detalha a técnica de **Geração Aumentada por Recuperação**, que atua como uma ponte entre modelos de linguagem e fontes de dados externas.
 
-* [cite_start]**Problema Resolvido:** Mitigação de alucinações e atualização de conhecimento sem necessidade de retreinamento[cite: 15, 73].
-* **Componentes do Fluxo:**
-    1.  [cite_start]**Query:** A pergunta do usuário[cite: 19].
-    2.  [cite_start]**Embedding Model:** Transformação de texto em vetores matemáticos[cite: 22, 23].
-    3.  [cite_start]**VectorDB:** Onde os textos convertidos são armazenados e buscados[cite: 26, 27].
-    4.  [cite_start]**LLM:** O "cérebro" que formula a resposta final baseada no contexto recuperado[cite: 33, 34].
-* [cite_start]**Tipos de RAG Pesquisados:** Naive RAG, Advanced RAG, Modular RAG, Graph RAG, RAG Híbrido e Self-RAG[cite: 54, 57, 60, 63, 66, 69].
+* **Problema Resolvido:** Redução de alucinações e atualização constante do conhecimento sem necessidade de retreinar o modelo.
+* **O Fluxo RAG:**
+    1.  **Query:** A pergunta inicial do usuário.
+    2.  **Embedding Model:** Conversão do texto em "vetores" (idioma matemático).
+    3.  **VectorDB:** Busca por contextos relevantes no banco de dados.
+    4.  **LLM:** Processamento do contexto recuperado para gerar uma resposta precisa.
+* **Variações:** Naive RAG, Advanced RAG, Modular RAG, Graph RAG, RAG Híbrido e Self-RAG.
 
 ### 2. Bancos de Dados Vetoriais
-[cite_start]Foca na infraestrutura que permite a busca por significado em vez de apenas palavras-chave exatas[cite: 94, 95].
+Foca na infraestrutura que permite a busca por significado (semântica) em vez de apenas palavras-chave.
 
-* [cite_start]**Funcionamento:** Utiliza vetores (listas de números) para representar o sentido de textos, imagens ou áudios[cite: 95, 96].
-* [cite_start]**Métricas de Similaridade:** Similaridade de Cosseno, Distância Euclidiana e Produto Interno[cite: 106, 107, 109, 110].
-* **Principais Ferramentas:**
-    * [cite_start]**Qdrant:** Alta performance em Rust (Destaque da pesquisa)[cite: 118, 137].
-    * [cite_start]**Pinecone:** Serviço gerenciado em nuvem[cite: 121, 122].
-    * [cite_start]**Chroma:** Ideal para protótipos locais[cite: 126, 127].
-    * [cite_start]**pgvector:** Extensão vetorial para PostgreSQL[cite: 131, 132].
+* **Conceito de Vetor:** Representação numérica do significado de dados (textos, imagens ou áudios).
+* **Busca por Similaridade:** Utilização de métricas como Similaridade de Cosseno, Distância Euclidiana e Produto Interno para encontrar dados "próximos".
+* **Ferramentas Analisadas:**
+    * **Qdrant:** Alta performance e segurança de memória (desenvolvido em Rust).
+    * **Pinecone:** Escalabilidade em nuvem.
+    * **Weaviate & Milvus:** Foco em grandes escalas e busca híbrida.
+    * **Chroma & pgvector:** Simplicidade e integração com sistemas existentes.
 
 ---
 
 ## 🛠️ Metodologia e Tecnologias
-A pesquisa foi estruturada através de análise bibliográfica de documentações técnicas e frameworks de IA.
+A pesquisa foi realizada através de análise técnica de arquiteturas de sistemas e ferramentas de mercado.
 
-| Tecnologia | Função |
+| Tecnologia | Função no Ecossistema |
 | :--- | :--- |
-| **LLMs** | [cite_start]Geração de respostas baseadas em contexto (GPT, Gemini, Claude)[cite: 35]. |
-| **Embeddings** | [cite_start]Tradução de linguagem humana para vetores matemáticos[cite: 25, 101]. |
-| **Busca Semântica** | [cite_start]Recuperação de informação por similaridade (ANN)[cite: 105, 113]. |
-| **Rust / Python** | [cite_start]Linguagens base para as ferramentas de alta performance citadas[cite: 137]. |
+| **LLMs** | Geração de respostas inteligentes (ChatGPT, Gemini, Claude). |
+| **Embeddings** | Tradução de conceitos humanos para o idioma computacional. |
+| **Busca Semântica** | Recuperação de informação baseada no sentido, não na letra. |
+| **Qdrant / Rust** | Armazenamento e indexação de alta velocidade. |
 
 ---
 
-## 📈 Características Principais das Tecnologias
-* [cite_start]**Rastreabilidade:** Possibilidade de saber a fonte exata da resposta da IA[cite: 75].
-* [cite_start]**Custo-benefício:** Mais barato que treinar modelos do zero[cite: 77].
-* [cite_start]**Alta Dimensionalidade:** Capacidade de lidar com vetores de milhares de dimensões[cite: 112].
-* [cite_start]**Escalabilidade:** Suporte a bilhões de vetores com buscas em milissegundos[cite: 114].
+## 📈 Vantagens e Características
+* **Atualização em tempo real:** Novos dados podem ser adicionados ao banco sem custos de treinamento.
+* **Rastreabilidade:** É possível identificar a fonte exata que embasou a resposta da IA.
+* **Custo-benefício:** Técnica eficaz para tornar IAs especialistas em negócios específicos de forma econômica.
 
 ---
-> [cite_start]"O RAG é uma ponte inteligente entre a criatividade dos modelos de linguagem e a precisão das bases de dados." [cite: 79]
+> "O RAG é uma ponte inteligente entre a criatividade dos modelos de linguagem e a precisão das bases de dados."
 ---
 
 ## 🎓 Autor
