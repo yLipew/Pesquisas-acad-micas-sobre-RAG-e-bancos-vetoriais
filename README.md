@@ -1,0 +1,1 @@
+# Pesquisas-acad-micas-sobre-RAG-e-bancos-vetoriais
